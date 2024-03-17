@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Joseph Lihou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&family=Syne+Mono&family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Lihou</title>
+
+    <a href="featured.html">
+      <img loading="lazy" class="logo" src="imgsv2/JL.png">
+  </a> 
+    <style>
+
+.logo {
+  width: 80px;
+  padding: 10px;
+  position: absolute;
+}  
+
+ /* Style for the container */
+ .image-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: none; /* Horizontal scroll if images overflow */
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+  /* Style for individual images */
+  .image-strip img {
+    width: 50px;
+    height: 20vh; /* Set the fixed height */
+    object-fit: cover; /* Crop images to fit */
+    overflow: hidden; /* Hide overflow */
+    margin: 10px; /* Gap between images */
+    z-index: 9998;
+  
+  }
+
+  /* Enlarge image on hover */
+  .image-strip img:hover {
+    transform: scale(1.2, 1.1); /* Scale the image to 120% */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    z-index: 9999;
+    transition: 0s;
+  }
+
+  /* Style for the enlarged image */
+  .enlarged-image img {
+    max-width: 100%; /* Limit the size of the enlarged image */
+    max-height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0); /* Add shadow for better visibility */
+    z-index: 9999;
+    margin-top: -20%;
+
+  }
+
+/* Style for enlarged image container */
+.enlarged-image {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+
+  .selectimage {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: 'VT323', monospace;
+  color: rgb(20, 20, 20);
+  font-size: 20px;
+}
+
+.text-box {
+  position: fixed;
+  width: 22%;
+  right: 5%;
+  bottom: 5%;
+  font-family: 'VT323', monospace;
+  color: rgb(20, 20, 20);
+  box-sizing: border-box; /* Include padding and border in total width */
+}
+
+
+
+
+    </style>
+    </head>
+    <body>
+    
+        <div class="image-strip">
+            <!-- Place your images here -->
+            <img src="imgsv2/exhib/exhib1.png" alt="Image 1">
+            <img src="imgsv2/exhib/exhib2.png" alt="Image 2">
+            <img src="imgsv2/exhib/exhib3.png" alt="Image 3">
+            <img src="imgsv2/exhib/exhib4.png" alt="Image 3">
+            <img src="imgsv2/exhib/exhib5.png" alt="Image 3">
+            <img src="imgsv2/exhib/exhib6.png" alt="Image 3">
+            <!-- Add more images as needed -->
+          </div>
+<br>
+          <div class="selectimage">
+            <p>Select Image</p>
+          </div>
+          
+          <!-- Enlarged image container -->
+          <div class="enlarged-image">
+            <img src="" alt="Enlarged Image" id="enlarged">
+          </div>
+
+  <!--Text-->
+  <div class="text-box">
+    <h1>CSM Architecture Exhibition</h1>
+    <p>Curation and Exhibition Design</p>
+    <p>Leading the exhibtion curation team, I designed and built our Architecture studios' exhibtion plinth, draping the plinth in calico fabric and painting a water-plaster mixture over the top to create the desired graceful yet solid fabric curves, ontop of which I curated a host of models from my fellow students, along with my own work </p>
+    </div>
+          <script>
+            // JavaScript to handle image enlargement
+            const images = document.querySelectorAll('.image-strip img');
+            const enlargedImage = document.getElementById('enlarged');
+          
+            // Add event listeners to each image
+            images.forEach(image => {
+              image.addEventListener('click', function() {
+                enlargedImage.src = this.src;
+                document.querySelector('.enlarged-image').style.display = 'block';
+              });
+            });
+          
+            // Hide enlarged image when clicked outside
+            enlargedImage.addEventListener('click', function() {
+              this.parentElement.style.display = 'none';
+            });
+          </script>
+    
+    </body>
+    </html>
+</body>

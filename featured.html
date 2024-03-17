@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Joseph Lihou</title>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&family=Syne+Mono&family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <a href="featured.html">
+      <img loading="lazy" class="logo" src="imgsv2/JL.png">
+  </a> 
+  <br>
+
+
+  
+    <style>
+
+.logo {
+  width: 80px;
+  padding: 10px;
+  position: absolute;
+  cursor: pointer;
+}   
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-strip {
+  /* Your existing styles */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: none; /* Horizontal scroll if images overflow */
+}
+
+
+  /* Style for individual images */
+  .image-strip img {
+    width: 50px;
+    height: 60vh; /* Set the fixed height */
+    object-fit: cover; /* Crop images to fit */
+    overflow: hidden; /* Hide overflow */
+    margin: 10px; /* Gap between images */
+    z-index: 9998;
+  
+  }
+
+  /* Enlarge image on hover */
+  .image-strip img:hover {
+    transform: scale(1.2, 1.1); /* Scale the image to 120% */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    z-index: 9999;
+    transition: 0s;
+  }
+
+  /* Style for the enlarged image */
+  .enlarged-image img {
+    max-width: 100%; /* Limit the size of the enlarged image */
+    max-height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0); /* Add shadow for better visibility */
+    z-index: 9999;
+  }
+
+  /* Text */
+  .hover-text {
+    position: absolute;
+    overflow:hidden;
+    top: 85%;
+    font-family: 'VT323', monospace;
+    color: rgb(20, 20, 20);
+    font-size: 25px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease; /* Smooth transition for opacity */
+    white-space: nowrap;
+  }
+
+
+  /* Show text on hover */
+  .image-strip a:hover .hover-text {
+    opacity: 1;
+
+  }
+
+  .tag {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  text-align: right;
+  font-family: 'VT323', monospace;
+  color: rgb(20, 20, 20);
+  font-size: 15px;
+}
+
+.contact {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  text-align: right;
+  font-family: 'VT323', monospace;
+  color: rgb(20, 20, 20);
+  font-size: 15px;
+}
+
+
+    </style>
+    </head>
+    <body>
+    
+    <div class="container">
+    <div class="image-strip">
+      <a href="slimjimsgig.html">
+        <img src="imgsv2/featured/ft1.png" alt="slimjimsgig">
+        <span class="hover-text"><u>Stereo Cupid Gig</u><br>Director<br>Peach Records</span>
+      </a>
+      <a href="feelalivesnippet.html">
+        <img src="imgsv2/featured/ft2.png" alt="feelalivesnippet">
+        <span class="hover-text"><u>Feel Alive</u><br>Lyric Video<br>Peach Records</span>
+      </a>
+      <a href="istanbulgig.html">
+        <img src="imgsv2/featured/ft3.png" alt="istanbulgig">
+        <span class="hover-text"><u>Istanbul Gig</u><br>Poster design<br>Peach Records</span>
+      </a>
+      <a href="page1.html">
+        <img src="imgsv2/featured/ft4.png" alt="Image 1">
+        <span class="hover-text"><u>Twist</u><br>Creative Coding<br>AV Portfolio</span>
+      </a>
+      <a href="sonicsolidification.html">
+        <img src="imgsv2/featured/ft5.png" alt="sonicsolidification">
+        <span class="hover-text"><u>Sonic Solidification</u><br>Audio Visual<br>BA Architecture</span>
+      </a>
+      <a href="chelseaphysicgarden.html">
+        <img src="imgsv2/featured/ft7.png" alt="Image 1">
+        <span class="hover-text"><u>Seed Pod</u><br>Metalwork Sculpture<br>Installation</span>
+      </a>
+      <a href="csmexhibition.html">
+        <img src="imgsv2/featured/ft8.png" alt="Image 1">
+        <span class="hover-text"><u>BA Exhibtion</u><br>Exhibition Curator<br>Central Saint Martins</span>
+      </a>
+      <a href="formcature.html">
+        <img src="imgsv2/featured/ft9.png" alt="Image 1">
+        <span class="hover-text"><u>Form Capture</u><br>Collage<br>BA Architecture</span>
+      </a>
+      <a href="icepods.html">
+        <img src="imgsv2/featured/ft10.png" alt="Image 1">
+        <span class="hover-text"><u>Ice Pods</u><br>Acrylic Maquette<br>BA Architecture</span>
+      </a>
+      <a href="soundmachine.html">
+        <img src="imgsv2/featured/ft13.png" alt="Image 1">
+        <span class="hover-text"><u>The Sound Machine</u><br>Exterior Collage<br>BA Architecture</span>
+      </a>
+      <a href="constructionfossil.html">
+        <img src="imgsv2/featured/ft15.png" alt="Image 1">
+        <span class="hover-text"><u>Construction Fossil</u><br>Concrete Sculpture<br>BA Architecture</span>
+      </a>
+      <a href="ecclesiasticalkaleidoscope.html">
+        <img src="imgsv2/featured/ft16.png" alt="Image 1">
+        <span class="hover-text"><u>Ecclesiastical Kaleidoscope</u><br>Spatial Concept<br>Design Portfolio</span>
+      </a>
+      <a href="vacuumform.html">
+        <img src="imgsv2/featured/ft17.png" alt="Image 1">
+        <span class="hover-text"><u>Frozen Form</u><br>Vacuum Formed Acrylic<br>BA Architecture</span>
+      </a>
+    </div>
+  </div>
+
+  <br>
+  <a href="about.html">
+          <div class="tag">
+            <p>Website Design and Code - @ Joseph Lihou 2024</p>
+          </div>
+        </a>  
+        
+        <a href="about.html">
+          <div class="contact">
+            <p>About/Contact</p>
+          </div>
+        </a> 
+    
+    </body>
+    </html>
+</body>
