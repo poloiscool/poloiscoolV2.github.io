@@ -82,19 +82,26 @@
     z-index: 9999;
   }
 
-.selectimage {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  bottom: 0%;
-  left: 1205px;
+  .selectimage {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   font-family: 'VT323', monospace;
-    color: rgb(20, 20, 20);
-    font-size: 20px;
+  color: rgb(20, 20, 20);
+  font-size: 20px;
 }
 
-
+.text-box {
+  position: fixed;
+  width: 22%;
+  right: 5%;
+  bottom: 5%;
+  font-family: 'VT323', monospace;
+  color: rgb(20, 20, 20);
+  box-sizing: border-box; /* Include padding and border in total width */
+}
 
 
     </style>
@@ -122,7 +129,12 @@
             <img src="" alt="Enlarged Image" id="enlarged">
           </div>
 
-
+<!--Text-->
+<div class="text-box">
+<h1>Chelsea Physic Garden</h1>
+<p>Sculptural Installation Competition Winner</p>
+<p>After winning the Chelsea Physic Garden installation competition whilst studying Foundation Spatial Design at Central Saint Martins in 2019, I was commissioned by the owners to construct and install my steel seed pod sculptures on the grounds</p>
+</div>
           <script>
             // JavaScript to handle image enlargement
             const images = document.querySelectorAll('.image-strip img');
